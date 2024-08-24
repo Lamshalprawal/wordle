@@ -31,10 +31,15 @@ services:
           memory: 256M
           cpus: '2'
 
+
+
+
   cloudflared:
     image: cloudflare/cloudflared:latest
     command: tunnel --no-autoupdate run --token eyJhIjoiYmVhMGJlODhjOWNmY2RiYzQ3NjE1NWNhNTgxN2MwNzgiLCJ0IjoiM2ZhMTgzMjAtY2QzMS00YmU5LTgxMzMtMzAyYjZmZmRlMGYwIiwicyI6Ik4yUmtOekE0TWpFdE1EazRZUzAwWm1RekxUbGpZMlF0WldVNVpEVmpaR1UwTWpJNSJ9
     
+
+
     networks:
       - mynetwork
     deploy:
@@ -42,6 +47,8 @@ services:
         limits:
           memory: 256M
           cpus: '0.5'
+
+
 
 networks:
   mynetwork:
